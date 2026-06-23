@@ -1,0 +1,153 @@
+<!-- PCL2 自定义主页 - 蒸汽朋克 / 机械美学 -->
+<!-- 配色随 PCL 主题色切换，设计风格：黄铜齿轮 + 红石能量 + 铁砧工艺 -->
+
+<!-- ====== 顶部欢迎卡片 ====== -->
+<local:MyCard Margin="0,0,0,15" CanSwap="False" HasMouseAnimation="False">
+    <StackPanel Margin="25,28,23,22">
+        <!-- 装饰方块列 -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,14">
+            <local:MyImage Width="28" Height="28" Margin="3,0" Source="pack://application:,,,/images/Blocks/Anvil.png" />
+            <local:MyImage Width="28" Height="28" Margin="3,0" Source="pack://application:,,,/images/Blocks/GoldBlock.png" />
+            <local:MyImage Width="28" Height="28" Margin="3,0" Source="pack://application:,,,/images/Blocks/RedstoneBlock.png" />
+            <local:MyImage Width="28" Height="28" Margin="3,0" Source="pack://application:,,,/images/Blocks/CommandBlock.png" />
+            <local:MyImage Width="28" Height="28" Margin="3,0" Source="pack://application:,,,/images/Blocks/Diamond.png" />
+            <local:MyImage Width="28" Height="28" Margin="3,0" Source="pack://application:,,,/images/Blocks/RedstoneLampOn.png" />
+            <local:MyImage Width="28" Height="28" Margin="3,0" Source="pack://application:,,,/images/Blocks/Cobblestone.png" />
+        </StackPanel>
+        <!-- 主标题 -->
+        <TextBlock TextWrapping="Wrap" FontSize="20" FontWeight="Bold" Foreground="{DynamicResource ColorBrush1}"
+                   Text="齿轮与红石 · 蒸汽朋克工坊" />
+        <!-- 副标题 -->
+        <TextBlock TextWrapping="Wrap" FontSize="11" Margin="0,7,0,0" Foreground="{DynamicResource ColorBrush4}"
+                   Text="蒸汽轰鸣，齿轮咬合——世界从铸铁的框架中苏醒。&#xA;每一次启动，都是一次机械灵魂的点燃。" />
+    </StackPanel>
+</local:MyCard>
+
+<!-- ====== 快捷启动操作 ====== -->
+<local:MyCard Title="操作面板" Margin="0,0,0,15" CanSwap="True" IsSwapped="False">
+    <StackPanel Margin="25,40,23,18">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Grid.Column="0" Margin="0,0,8,0" Height="48" Padding="12,0" ColorType="Highlight"
+                        Text="启动最新版本&#xA;1.21" EventType="启动游戏" EventData="1.21"
+                        ToolTip="以 1.21 启动 Minecraft" />
+            <local:MyButton Grid.Column="1" Margin="8,0,8,0" Height="48" Padding="12,0"
+                        Text="模组文件夹&#xA;Mods" EventType="打开文件" EventData=".minecraft\mods"
+                        ToolTip="打开 .minecraft/mods 文件夹" />
+            <local:MyButton Grid.Column="2" Margin="8,0,0,0" Height="48" Padding="12,0"
+                        Text="资源包文件夹&#xA;Resourcepacks" EventType="打开文件" EventData=".minecraft\resourcepacks"
+                        ToolTip="打开 .minecraft/resourcepacks 文件夹" />
+        </Grid>
+    </StackPanel>
+</local:MyCard>
+
+<!-- ====== 常用服务器入口 ====== -->
+<local:MyCard Title="服务器传送门" Margin="0,0,0,15" CanSwap="True" IsSwapped="False">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,8" FontSize="11" Foreground="{DynamicResource ColorBrush5}"
+                   Text="点击目标服务器，一键传送" />
+        <local:MyListItem Margin="-5,0,-5,4"
+                          Logo="pack://application:,,,/images/Blocks/GoldBlock.png"
+                          Title="Hypixel" Info="起床战争 / 空岛战争 · 版本 1.8.9"
+                          EventType="启动游戏" EventData="1.8.9|mc.hypixel.net" Type="Clickable" />
+        <local:MyListItem Margin="-5,0,-5,4"
+                          Logo="pack://application:,,,/images/Blocks/Cobblestone.png"
+                          Title="2B2T" Info="最古老的无政府服务器 · 版本 1.12.2"
+                          EventType="启动游戏" EventData="1.12.2|2b2t.org" Type="Clickable" />
+        <local:MyListItem Margin="-5,0,-5,4"
+                          Logo="pack://application:,,,/images/Blocks/CommandBlock.png"
+                          Title="MCBBS 纪念站" Info="中文 Minecraft 社区 · 永远的回忆"
+                          EventType="打开网页" EventData="https://www.mcbbs.net/" Type="Clickable" />
+        <local:MyListItem Margin="-5,0,-5,0"
+                          Logo="pack://application:,,,/images/Blocks/Grass.png"
+                          Title="MineMC" Info="国内小游戏服务器 · 版本 1.12.2"
+                          EventType="启动游戏" EventData="1.12.2|play.minemc.cn" Type="Clickable" />
+    </StackPanel>
+</local:MyCard>
+
+<!-- ====== 实用工具区 ====== -->
+<local:MyCard Title="实用工具箱" Margin="0,0,0,15" CanSwap="True" IsSwapped="False">
+    <StackPanel Margin="25,40,23,18">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Grid.Column="0" Margin="0,0,6,0" Height="42" ColorType="Highlight"
+                        Text="内存优化" EventType="内存优化" ToolTip="自动优化 JVM 内存参数" />
+            <local:MyButton Grid.Column="1" Margin="6,0,6,0" Height="42"
+                        Text="清理垃圾" EventType="清理垃圾" ToolTip="清理 Minecraft 日志与缓存" />
+            <local:MyButton Grid.Column="2" Margin="6,0,6,0" Height="42"
+                        Text="B 站 MC 区" EventType="打开网页" EventData="https://www.bilibili.com/v/game/minecraft/"
+                        ToolTip="打开哔哩哔哩 Minecraft 专区" />
+            <local:MyButton Grid.Column="3" Margin="6,0,0,0" Height="42"
+                        Text="MC Wiki" EventType="打开网页" EventData="https://zh.minecraft.wiki/"
+                        ToolTip="打开 Minecraft 中文 Wiki" />
+        </Grid>
+    </StackPanel>
+</local:MyCard>
+
+<!-- ====== 更多工具（可折叠） ====== -->
+<local:MyCard Title="更多工具 · 资源下载" Margin="0,0,0,15" CanSwap="True" IsSwapped="True">
+    <StackPanel Margin="25,40,23,18">
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,12" FontSize="11" Foreground="{DynamicResource ColorBrush5}"
+                   Text="下载光影、模组、资源包，扩充你的 Minecraft 体验" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Grid.Column="0" Margin="0,0,8,0" Height="42"
+                        Text="下载光影" EventType="打开网页" EventData="https://modrinth.com/shaders"
+                        ToolTip="前往 Modrinth 浏览光影包" />
+            <local:MyButton Grid.Column="1" Margin="8,0,8,0" Height="42"
+                        Text="下载模组" EventType="打开网页" EventData="https://modrinth.com/mods"
+                        ToolTip="前往 Modrinth 浏览模组" />
+            <local:MyButton Grid.Column="2" Margin="8,0,0,0" Height="42"
+                        Text="资源包" EventType="打开网页" EventData="https://modrinth.com/resourcepacks"
+                        ToolTip="前往 Modrinth 浏览资源包" />
+        </Grid>
+        <Grid Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Grid.Column="0" Margin="0,0,8,0" Height="42"
+                        Text="CurseForge" EventType="打开网页" EventData="https://www.curseforge.com/minecraft"
+                        ToolTip="前往 CurseForge 浏览更多内容" />
+            <local:MyButton Grid.Column="1" Margin="8,0,8,0" Height="42"
+                        Text="MCBBS 整合包" EventType="打开网页" EventData="https://www.mcbbs.net/forum-modpack-1.html"
+                        ToolTip="前往 MCBBS 整合包板块" />
+            <local:MyButton Grid.Column="2" Margin="8,0,0,0" Height="42" ColorType="Highlight"
+                        Text="PCL2 帮助" EventType="打开帮助" EventData="个性化/自定义事件.json"
+                        ToolTip="查看 PCL2 使用帮助文档" />
+        </Grid>
+    </StackPanel>
+</local:MyCard>
+
+<!-- ====== 关于此主页（可折叠页脚） ====== -->
+<local:MyCard Title="关于此主页" Margin="0,0,0,0" CanSwap="True" IsSwapped="True" UseAnimation="False">
+    <StackPanel Margin="25,40,23,20">
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <local:MyImage Width="20" Height="20" Margin="2,0" Source="pack://application:,,,/images/Blocks/Anvil.png" />
+            <local:MyImage Width="20" Height="20" Margin="2,0" Source="pack://application:,,,/images/Blocks/GoldBlock.png" />
+            <local:MyImage Width="20" Height="20" Margin="2,0" Source="pack://application:,,,/images/Blocks/RedstoneBlock.png" />
+            <local:MyImage Width="20" Height="20" Margin="2,0" Source="pack://application:,,,/images/Blocks/CommandBlock.png" />
+            <local:MyImage Width="20" Height="20" Margin="2,0" Source="pack://application:,,,/images/Blocks/Diamond.png" />
+        </StackPanel>
+        <TextBlock TextWrapping="Wrap" FontSize="12" Margin="0,0,0,5" Foreground="{DynamicResource ColorBrush2}"
+                   Text="蒸汽朋克工坊 · PCL2 自定义主页" />
+        <TextBlock TextWrapping="Wrap" FontSize="10" Foreground="{DynamicResource ColorBrush6}"
+                   Text="设计风格：蒸汽朋克 / 机械美学&#xA;配色跟随 PCL 主题色动态切换，齿轮与红石交织的工业幻想&#xA;Powered by PCL2 Custom Homepage Engine" />
+        <local:MyHint Margin="0,12,0,0" Theme="Blue"
+                      Text="提示：你可以随时修改此文件（Custom.xaml）来定制主页。&#xA;如果改坏了，删除此文件即可恢复默认。" />
+    </StackPanel>
+</local:MyCard>
