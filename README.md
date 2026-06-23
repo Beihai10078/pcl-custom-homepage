@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: c592e66353ca9f5c930cfdc36e341482_8d4a5ef56ec411f1a0095254002afed2
+    ReservedCode1: 1efPzTx6WFp5vD865fz8CYn2khQi5qZShttOh/wrS3qmwbXGk7Wp1MvDAh3tdzgHY/YyK+Ybw1tusgKJmfjxTgFIZjNpZszWTQ51Cj/HFn104S5v+eKjbgDWuE/kjYj38ws0FttiAlRyv8juYXpxsDLZsjOszuTZKgbpstSSGtOM1V882lYsEL545XI=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: c592e66353ca9f5c930cfdc36e341482_8d4a5ef56ec411f1a0095254002afed2
+    ReservedCode2: 1efPzTx6WFp5vD865fz8CYn2khQi5qZShttOh/wrS3qmwbXGk7Wp1MvDAh3tdzgHY/YyK+Ybw1tusgKJmfjxTgFIZjNpZszWTQ51Cj/HFn104S5v+eKjbgDWuE/kjYj38ws0FttiAlRyv8juYXpxsDLZsjOszuTZKgbpstSSGtOM1V882lYsEL545XI=
+---
+
 # 齿轮与红石 · 蒸汽朋克工坊
 
 PCL2 蒸汽朋克风格自定义主页 —— 齿轮轰鸣，红石闪烁，一台铸铁与代码交织的工业幻想。
@@ -39,3 +50,4 @@ Plain Craft Launcher 2\PCL\Custom.xaml
 ## 许可
 
 MIT License
+*（内容由AI生成，仅供参考）*
